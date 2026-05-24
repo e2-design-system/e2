@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Documentation for E<sup>2</sup> Design System."><meta name="theme-color" content="#05070c"><title>Documentation — E&lt;sup&gt;2&lt;/sup&gt; Design System</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/_astro/BaseLayout.B5WGwgFg.css"></head> <body> <div class="site-shell"> <header class="site-header"> <div class="nav"> <a class="brand" href="/" aria-label="E2 Design System home"> <span class="brand-mark"> <span class="brand-e">E</span> <span class="brand-2">2</span> </span> <span class="brand-name">Design System</span> </a> <nav class="nav-links" aria-label="Primary navigation"> <a href="/icons">Icons</a><a href="/markers">Markers</a><a href="/symbols">Symbols</a><a href="/docs">Documentation</a><a href="/changelog">Changelog</a> </nav> <a class="nav-cta" href="/docs">Get started</a> </div> </header>  <main class="container docs-shell"> <aside class="docs-sidebar" aria-label="Documentation navigation"> <p class="sidebar-title">Documentation</p> <nav> <a href="/docs">Overview</a><a href="/docs/icon-system">Icon System</a><a href="/docs/gis-marker-system">GIS Marker System</a><a href="/docs/symbol-system">Symbol System</a><a href="/docs/naming">Naming</a><a href="/docs/export">Export</a><a href="/docs/qa">QA</a><a href="/docs/contribution">Contribution</a> </nav> </aside> <article class="docs-content"> <h1 id="illustrative-symbol-system">Illustrative Symbol System</h1>
+<p>Illustrative symbols are larger pictograms for technical concepts. They are not small UI icons and must not be designed by simply scaling icons up.</p>
+<h2 id="purpose">Purpose</h2>
+<p>Use symbols for larger conceptual communication:</p>
+<ul>
+<li>feature blocks</li>
+<li>hero graphics</li>
+<li>onboarding</li>
+<li>empty states</li>
+<li>documentation illustrations</li>
+<li>technical product storytelling</li>
+</ul>
+<p>A symbol explains a concept visually. An icon labels or triggers a compact UI action.</p>
+<h2 id="baseline-parameters">Baseline parameters</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Parameter</th><th>Requirement</th></tr></thead><tbody><tr><td>Base grid</td><td>200 × 200 px</td></tr><tr><td>ViewBox</td><td><code>0 0 200 200</code></td></tr><tr><td>Primary stroke</td><td>4 px</td></tr><tr><td>Small symbol size</td><td>100 px, 2 px stroke</td></tr><tr><td>Base symbol size</td><td>200 px, 4 px stroke</td></tr><tr><td>Large symbol size</td><td>400 px, 6–8 px stroke</td></tr><tr><td>Cap</td><td>round</td></tr><tr><td>Join</td><td>round</td></tr><tr><td>Fill model</td><td>optional subtle fills</td></tr><tr><td>Export model</td><td>SVG-first</td></tr></tbody></table>
+<h2 id="relationship-to-icons">Relationship to icons</h2>
+<p>Symbols share visual DNA with icons:</p>
+<ul>
+<li>geometric construction</li>
+<li>controlled curves</li>
+<li>round caps and joins</li>
+<li>restrained detail</li>
+<li>precise SVG export</li>
+</ul>
+<p>But symbols may use:</p>
+<ul>
+<li>more primitives</li>
+<li>supporting shapes</li>
+<li>subtle fills</li>
+<li>layering</li>
+<li>concept-specific composition</li>
+<li>background plates or construction hints</li>
+</ul>
+<h2 id="composition-model">Composition model</h2>
+<p>Use a three-layer model:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Layer</th><th>Purpose</th></tr></thead><tbody><tr><td>Background</td><td>optional grid, plate, or environmental context</td></tr><tr><td>Midground</td><td>secondary concept support</td></tr><tr><td>Foreground</td><td>main symbol shape</td></tr></tbody></table>
+<p>Do not overuse all three layers. A symbol should still feel systematic and controlled.</p>
+<h2 id="stroke-and-fill-rules">Stroke and fill rules</h2>
+<p>Primary linework uses 4 px stroke at 200 px.</p>
+<p>Fills are allowed when they clarify hierarchy:</p>
+<ul>
+<li>neutral fill at 6–12% opacity</li>
+<li>accent fill at 10–20% opacity</li>
+<li>no decorative gradients by default</li>
+<li>gradients allowed only in marketing or hero-specific artwork</li>
+</ul>
+<h2 id="complexity-rules">Complexity rules</h2>
+<p>Symbols may be more complex than icons, but they must remain instantly interpretable.</p>
+<p>Recommended limits:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Limit</th></tr></thead><tbody><tr><td>Primary concept shapes</td><td>1–3</td></tr><tr><td>Supporting shapes</td><td>0–4</td></tr><tr><td>Accent details</td><td>0–6</td></tr><tr><td>Text inside symbol</td><td>avoid unless decorative and non-essential</td></tr></tbody></table>
+<h2 id="categories">Categories</h2>
+<p>Initial symbol categories:</p>
+<ul>
+<li>infrastructure</li>
+<li>data</li>
+<li>communication</li>
+<li>mapping</li>
+<li>automation</li>
+<li>analysis</li>
+<li>security</li>
+</ul>
+<h2 id="usage-rules">Usage rules</h2>
+<p>Use symbols for:</p>
+<ul>
+<li>landing page sections</li>
+<li>feature explanations</li>
+<li>technical docs</li>
+<li>empty states</li>
+<li>onboarding flows</li>
+<li>large cards</li>
+</ul>
+<p>Do not use symbols for:</p>
+<ul>
+<li>buttons</li>
+<li>toolbar actions</li>
+<li>navigation icons</li>
+<li>dense map markers</li>
+<li>small UI labels</li>
+</ul>
+<h2 id="naming">Naming</h2>
+<p>Use:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="txt"><code><span class="line"><span>symbol-[category]-[concept]</span></span></code></pre>
+<p>Examples:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="txt"><code><span class="line"><span>symbol-infrastructure-cloud-service</span></span>
+<span class="line"><span>symbol-data-data-layer</span></span>
+<span class="line"><span>symbol-communication-api-connection</span></span></code></pre>
+<h2 id="metadata">Metadata</h2>
+<p>Each symbol must include:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;name&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;cloud-service&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;label&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;Cloud Service&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;category&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;infrastructure&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;file&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;/symbols/cloud-service.svg&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;viewBox&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;0 0 200 200&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;stroke&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;4&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;keywords&quot;</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">&quot;cloud&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;service&quot;</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">&quot;hosting&quot;</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="qa-checklist">QA checklist</h2>
+<p>Before release:</p>
+<ul>
+<li>Base viewBox is <code>0 0 200 200</code>.</li>
+<li>Stroke is 4 px at base size.</li>
+<li>Visual center is optically balanced.</li>
+<li>Symbol still reads at 100 px.</li>
+<li>Fills are subtle and intentional.</li>
+<li>No essential text is embedded.</li>
+<li>SVG paths are clean.</li>
+<li>File name follows naming convention.</li>
+</ul> </article> </main>  <footer class="footer"> <div class="container footer-grid"> <div> <strong>E<sup class="brand-e2-sup">2</sup> Design System</strong> <p>Technical SVG icons, GIS marker symbols, and illustrative symbols.</p> </div> <div class="footer-meta"> <nav aria-label="Footer navigation"> <a href="/docs">Docs</a> <a href="/icons">Icons</a> <a href="/markers">Markers</a> <a href="/symbols">Symbols</a> </nav> <p class="footer-updated">
+Last updated: May 24, 2026 </p> </div> </div> </footer> </div> </body></html>

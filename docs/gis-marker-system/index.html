@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Documentation for E<sup>2</sup> Design System."><meta name="theme-color" content="#05070c"><title>Documentation — E&lt;sup&gt;2&lt;/sup&gt; Design System</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/_astro/BaseLayout.B5WGwgFg.css"></head> <body> <div class="site-shell"> <header class="site-header"> <div class="nav"> <a class="brand" href="/" aria-label="E2 Design System home"> <span class="brand-mark"> <span class="brand-e">E</span> <span class="brand-2">2</span> </span> <span class="brand-name">Design System</span> </a> <nav class="nav-links" aria-label="Primary navigation"> <a href="/icons">Icons</a><a href="/markers">Markers</a><a href="/symbols">Symbols</a><a href="/docs">Documentation</a><a href="/changelog">Changelog</a> </nav> <a class="nav-cta" href="/docs">Get started</a> </div> </header>  <main class="container docs-shell"> <aside class="docs-sidebar" aria-label="Documentation navigation"> <p class="sidebar-title">Documentation</p> <nav> <a href="/docs">Overview</a><a href="/docs/icon-system">Icon System</a><a href="/docs/gis-marker-system">GIS Marker System</a><a href="/docs/symbol-system">Symbol System</a><a href="/docs/naming">Naming</a><a href="/docs/export">Export</a><a href="/docs/qa">QA</a><a href="/docs/contribution">Contribution</a> </nav> </aside> <article class="docs-content"> <h1 id="gis-marker-system">GIS Marker System</h1>
+<p>GIS marker symbols are map-based point symbols. They use the E<sup>2</sup> icon language inside a map-ready container.</p>
+<h2 id="purpose">Purpose</h2>
+<p>Markers represent point features such as places, assets, services, observations, or objects on a map. They must remain spatially interpretable, legible on variable backgrounds, and safe to implement in map engines.</p>
+<h2 id="marker-architecture">Marker architecture</h2>
+<p>A marker consists of:</p>
+<ol>
+<li>Container — the outer shape, usually pin or circle.</li>
+<li>Glyph — the simplified icon inside the container.</li>
+<li>Halo or outline — optional contrast layer.</li>
+<li>Anchor metadata — implementation reference point.</li>
+</ol>
+<h2 id="baseline-parameters">Baseline parameters</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Parameter</th><th>Requirement</th></tr></thead><tbody><tr><td>Base viewBox</td><td><code>0 0 48 48</code></td></tr><tr><td>Default visual size</td><td>32–48 px</td></tr><tr><td>Glyph source</td><td>E<sup>2</sup> icon system</td></tr><tr><td>Glyph size</td><td>50–65% of container</td></tr><tr><td>Anchor model</td><td>center or bottom-center</td></tr><tr><td>Default pin anchor</td><td>bottom-center</td></tr><tr><td>Default pin coordinate</td><td><code>[24, 48]</code></td></tr><tr><td>Container stroke</td><td>1–2 px</td></tr><tr><td>Contrast layer</td><td>optional halo or outline</td></tr></tbody></table>
+<h2 id="anchor-model">Anchor model</h2>
+<p>The anchor is not part of the visual shape itself, but the marker must be designed so a developer can apply one reliable anchor consistently.</p>
+<p>Recommended anchor conventions:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Marker type</th><th>Anchor</th></tr></thead><tbody><tr><td>Circle marker</td><td>center</td></tr><tr><td>Pin marker</td><td>bottom-center</td></tr><tr><td>Dot marker</td><td>center</td></tr><tr><td>Cluster marker</td><td>center</td></tr></tbody></table>
+<p>For a 48 px pin marker:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;anchor&quot;</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">&quot;bottom-center&quot;</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  &quot;anchorCoordinate&quot;</span><span style="color:#E1E4E8">: [</span><span style="color:#79B8FF">24</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">48</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="contrast-strategy">Contrast strategy</h2>
+<p>Markers appear on light maps, dark maps, terrain maps, and satellite imagery. Use at least one of:</p>
+<ul>
+<li>container background</li>
+<li>outline</li>
+<li>halo</li>
+<li>high-contrast glyph</li>
+<li>controlled category color</li>
+</ul>
+<h2 id="semantic-encoding">Semantic encoding</h2>
+<p>Use visual channels intentionally:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Channel</th><th>Meaning</th></tr></thead><tbody><tr><td>Color</td><td>category</td></tr><tr><td>Size</td><td>importance or priority</td></tr><tr><td>Shape</td><td>marker class</td></tr><tr><td>Glyph</td><td>object type</td></tr></tbody></table>
+<p>Avoid encoding more than three simultaneous meanings.</p>
+<h2 id="density-behavior">Density behavior</h2>
+<p>Marker design should support clustering and decluttering. The design system should provide:</p>
+<ul>
+<li>single marker state</li>
+<li>selected marker state</li>
+<li>cluster marker state</li>
+<li>disabled or unavailable state</li>
+</ul>
+<h2 id="do">Do</h2>
+<ul>
+<li>Keep glyphs simpler than standalone icons.</li>
+<li>Preserve a consistent anchor assumption.</li>
+<li>Test on light, dark, and satellite basemaps.</li>
+<li>Provide metadata with each marker.</li>
+</ul>
+<h2 id="do-not">Do not</h2>
+<ul>
+<li>Treat a marker as a simple icon with a background only.</li>
+<li>Put small detailed icons inside small markers.</li>
+<li>Use colors that only work on one basemap.</li>
+<li>Change anchor assumptions between visually similar markers.</li>
+</ul> </article> </main>  <footer class="footer"> <div class="container footer-grid"> <div> <strong>E<sup class="brand-e2-sup">2</sup> Design System</strong> <p>Technical SVG icons, GIS marker symbols, and illustrative symbols.</p> </div> <div class="footer-meta"> <nav aria-label="Footer navigation"> <a href="/docs">Docs</a> <a href="/icons">Icons</a> <a href="/markers">Markers</a> <a href="/symbols">Symbols</a> </nav> <p class="footer-updated">
+Last updated: May 24, 2026 </p> </div> </div> </footer> </div> </body></html>

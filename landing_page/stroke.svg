@@ -1,0 +1,67 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <line
+    x1="2"
+    y1="2.3"
+    x2="22"
+    y2="2.3"
+    stroke="#1687ff"
+    stroke-width=".5"
+    stroke-miterlimit="10"
+  />
+
+  <line
+    x1="2"
+    y1="5.13"
+    x2="22"
+    y2="5.13"
+    stroke="#1687ff"
+    stroke-width="1"
+    stroke-miterlimit="10"
+  />
+
+  <line
+    x1="2"
+    y1="7.97"
+    x2="22"
+    y2="7.97"
+    stroke="#1687ff"
+    stroke-width="1.5"
+    stroke-miterlimit="10"
+  />
+
+  <line
+    x1="2"
+    y1="11.18"
+    x2="22"
+    y2="11.18"
+    stroke="#1687ff"
+    stroke-width="2"
+    stroke-miterlimit="10"
+  />
+
+  <line
+    x1="2"
+    y1="14.96"
+    x2="22"
+    y2="14.96"
+    stroke="#1687ff"
+    stroke-width="3"
+    stroke-miterlimit="10"
+  />
+
+  <line
+    x1="2"
+    y1="20"
+    x2="22"
+    y2="20"
+    stroke="#1687ff"
+    stroke-width="4"
+    stroke-miterlimit="10"
+  />
+</svg>

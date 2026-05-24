@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="E² is a standardized SVG design system for environmental software, GIS platforms, engineering systems, and scientific applications."><meta name="theme-color" content="#05070c"><title>E² Design System | Environmental, Engineering, and GIS Interfaces</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/_astro/BaseLayout.B5WGwgFg.css"></head> <body> <div class="site-shell"> <header class="site-header"> <div class="nav"> <a class="brand" href="/" aria-label="E2 Design System home"> <span class="brand-mark"> <span class="brand-e">E</span> <span class="brand-2">2</span> </span> <span class="brand-name">Design System</span> </a> <nav class="nav-links" aria-label="Primary navigation"> <a href="/icons">Icons</a><a href="/markers">Markers</a><a href="/symbols">Symbols</a><a href="/docs">Documentation</a><a href="/changelog">Changelog</a> </nav> <a class="nav-cta" href="/docs">Get started</a> </div> </header>  <main> <section class="hero container"> <div class="hero-copy"> <p class="eyebrow"> <span class="brand-e">E</span><sup class="brand-e2-sup">2</sup>
+Design System
+</p> <h1>
+A Design System for<br> <span>E</span>nvironmental and<br> <span>E</span>ngineering Interfaces.
+</h1> <div class="hero-rule"></div> <p class="hero-description">
+Standardized SVG icons, markers, and symbols for environmental
+          software, GIS platforms, engineering systems, and scientific
+          applications.
+</p> <p class="hero-description hero-description-secondary">
+Built for visual consistency, semantic clarity, and reliable
+          implementation across technical interfaces and maps.
+</p> <div class="hero-actions"> <a class="button primary" href="/system">Explore the System</a> <a class="button secondary" href="/docs">Documentation</a> </div> <div class="system-row" aria-label="Core E² system principles"> <div class="system-item"> <img class="system-icon" src="/landing_page/grid.svg" alt="" aria-hidden="true"> <span class="system-label">Grid-defined</span> </div> <div class="system-item"> <img class="system-icon" src="/landing_page/stroke.svg" alt="" aria-hidden="true"> <span class="system-label">Stroke-calibrated</span> </div> <div class="system-item"> <img class="system-icon" src="/landing_page/constrains.svg" alt="" aria-hidden="true"> <span class="system-label">Complexity-controlled</span> </div> <div class="system-item"> <img class="system-icon" src="/landing_page/svg_first.svg" alt="" aria-hidden="true"> <span class="system-label">SVG-first</span> </div> </div>  </div> </section> <!-- This section for later
+    <section class="container use-case-strip" aria-label="Designed for">
+      <span>Designed for</span>
+      <div>
+        {useCases.map((item) => <a href="/icons">{item}</a>)}
+      </div>
+    </section>
+
+    <section class="container proof-strip" aria-label="System proof points">
+      {
+        specs.map((item) => (
+          <div class="proof-item">
+            <strong>{item.split(" ")[0]}</strong>
+            <span>{item.replace(item.split(" ")[0], "").trim()}</span>
+          </div>
+        ))
+      }
+    </section>
+
+    <section class="container section">
+      <div class="section-header">
+        <p class="eyebrow">Interactive Model</p>
+        <h2>Explore the system by category, scale, and context.</h2>
+      </div>
+
+      <div class="explorer-panel">
+        <div class="explorer-sidebar">
+          <button type="button" class="active">All Assets</button>
+          <button type="button">Hydrology</button>
+          <button type="button">Infrastructure</button>
+          <button type="button">Monitoring</button>
+          <button type="button">Terrain</button>
+        </div>
+
+        <div class="explorer-content">
+          <div class="scale-row">
+            <span>16 px</span>
+            <span>24 px</span>
+            <span>32 px</span>
+            <span>48 px</span>
+          </div>
+
+          <div class="explorer-assets">
+            {
+              previewIcons.slice(0, 8).map((icon) => (
+                <div class="explorer-asset" aria-label={icon}>
+                  <span />
+                  <small>{icon}</small>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="section-header">
+        <p class="eyebrow">System Overview</p>
+        <h2>Built for structured visual communication.</h2>
+      </div>
+
+--> <div class="container section split-panel"> <div> <p class="eyebrow">Why E<sup class="brand-e2-sup">2</sup></p> <h2>More than an icon library.</h2> </div> <p>
+Most icon systems are designed for generic consumer applications. E<sup class="brand-e2-sup">2</sup> is built for technical and geospatial software where operational clarity,
+        semantic structure, and visual consistency are critical across interfaces,
+        maps, and analytical environments.
+</p> </div> </main> <section class="container section"> <div class="section-header"> <p class="eyebrow">System Scope</p> <h2>Three asset systems, one visual language.</h2> </div> <div class="feature-grid"> <article class="feature-card feature-card-large"> <p class="feature-meta">UI • Dashboards • Tooling</p> <h3>Technical Icons</h3> <p>
+Precision-built SVG icons for dashboards, interfaces, tooling, and
+          operational applications. Consistent geometry and scalable rendering
+          ensure clarity across dense UI environments.
+</p> <a href="/docs/icon-system">Read icon specification</a> </article> <article class="feature-card feature-card-large"> <p class="feature-meta">GIS • Maps • POI Systems</p> <h3>GIS Markers</h3> <p>
+Map markers optimized for geospatial readability, semantic hierarchy,
+          and implementation-safe positioning across modern mapping frameworks
+          and cartographic workflows.
+</p> <a href="/docs/gis-marker-system">Read marker specification</a> </article> <article class="feature-card feature-card-large"> <p class="feature-meta">Environmental • Scientific • Technical</p> <h3>Illustrative Symbols</h3> <p>
+Structured symbols for environmental monitoring, hydrology,
+          infrastructure, terrain analysis, and scientific visualization. Built
+          for recognition and technical communication.
+</p> <a href="/docs/symbol-system">Read symbol specification</a> </article> </div> </section> <section class="container section split-panel"> <div> <p class="eyebrow">Production Model</p> <h2>Designed for production workflows.</h2> </div> <p>
+E<sup class="brand-e2-sup">2</sup> defines asset geometry, naming logic, export
+      rules, quality-assurance criteria, and metadata structure required to distribute
+      technical SVG graphics consistently across websites, applications, and map interfaces.
+</p> </section> <section class="container section"> <div class="section-header"> <p class="eyebrow">Technical Foundation</p> <h2>System logic for scalable implementation.</h2> </div> <div class="feature-grid"> <article class="feature-card"> <h3>Grid-Based Construction</h3> <p>
+Shared geometric logic ensures consistent proportions, spacing, and
+          visual rhythm across icons, markers, and symbols.
+</p> </article> <article class="feature-card"> <h3>SVG-First Implementation</h3> <p>
+Optimized for responsive interfaces, scalable rendering, design
+          tokens, and modern frontend workflows.
+</p> </article> <article class="feature-card"> <h3>Semantic Consistency</h3> <p>
+Structured naming, categorization, and metadata support
+          maintainability across large technical software ecosystems.
+</p> </article> </div> </section>  <footer class="footer"> <div class="container footer-grid"> <div> <strong>E<sup class="brand-e2-sup">2</sup> Design System</strong> <p>Technical SVG icons, GIS marker symbols, and illustrative symbols.</p> </div> <div class="footer-meta"> <nav aria-label="Footer navigation"> <a href="/docs">Docs</a> <a href="/icons">Icons</a> <a href="/markers">Markers</a> <a href="/symbols">Symbols</a> </nav> <p class="footer-updated">
+Last updated: May 24, 2026 </p> </div> </div> </footer> </div> </body></html>

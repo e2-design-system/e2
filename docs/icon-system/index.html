@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Documentation for E<sup>2</sup> Design System."><meta name="theme-color" content="#05070c"><title>Documentation — E&lt;sup&gt;2&lt;/sup&gt; Design System</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/_astro/BaseLayout.B5WGwgFg.css"></head> <body> <div class="site-shell"> <header class="site-header"> <div class="nav"> <a class="brand" href="/" aria-label="E2 Design System home"> <span class="brand-mark"> <span class="brand-e">E</span> <span class="brand-2">2</span> </span> <span class="brand-name">Design System</span> </a> <nav class="nav-links" aria-label="Primary navigation"> <a href="/icons">Icons</a><a href="/markers">Markers</a><a href="/symbols">Symbols</a><a href="/docs">Documentation</a><a href="/changelog">Changelog</a> </nav> <a class="nav-cta" href="/docs">Get started</a> </div> </header>  <main class="container docs-shell"> <aside class="docs-sidebar" aria-label="Documentation navigation"> <p class="sidebar-title">Documentation</p> <nav> <a href="/docs">Overview</a><a href="/docs/icon-system">Icon System</a><a href="/docs/gis-marker-system">GIS Marker System</a><a href="/docs/symbol-system">Symbol System</a><a href="/docs/naming">Naming</a><a href="/docs/export">Export</a><a href="/docs/qa">QA</a><a href="/docs/contribution">Contribution</a> </nav> </aside> <article class="docs-content"> <h1 id="icon-system">Icon System</h1>
+<p>The E<sup>2</sup> icon system defines small interface glyphs optimized for technical clarity, compact UI use, and predictable SVG implementation.</p>
+<h2 id="purpose">Purpose</h2>
+<p>Icons communicate actions, interface states, navigation patterns, or compact object references. They are not illustrations and must remain simple at small sizes.</p>
+<h2 id="baseline-parameters">Baseline parameters</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Parameter</th><th>Requirement</th></tr></thead><tbody><tr><td>Base grid</td><td>24 × 24 px</td></tr><tr><td>ViewBox</td><td><code>0 0 24 24</code></td></tr><tr><td>Primary stroke</td><td>1.5 px</td></tr><tr><td>Small-size stroke</td><td>1 px at 16–20 px</td></tr><tr><td>Large-size stroke</td><td>2 px at 32 px and above</td></tr><tr><td>Stroke cap</td><td>round</td></tr><tr><td>Stroke join</td><td>round</td></tr><tr><td>Primary primitive count</td><td>maximum 3</td></tr><tr><td>Visible stroke count</td><td>maximum 5</td></tr><tr><td>Export model</td><td>SVG-first, stroke preserved</td></tr></tbody></table>
+<h2 id="stroke-model">Stroke model</h2>
+<p>Use 1.5 px as the default stroke at 24 px because it gives E<sup>2</sup> a precise, technical visual identity without becoming too fragile.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Rendered size</th><th>Stroke</th></tr></thead><tbody><tr><td>16 px</td><td>1 px</td></tr><tr><td>20 px</td><td>1–1.25 px</td></tr><tr><td>24 px</td><td>1.5 px</td></tr><tr><td>32 px</td><td>2 px</td></tr><tr><td>48 px+</td><td>2–2.5 px</td></tr></tbody></table>
+<h2 id="alignment-rules">Alignment rules</h2>
+<p>Thin strokes require explicit alignment discipline.</p>
+<ul>
+<li>1 px strokes align best on 0.5 px coordinates.</li>
+<li>1.5 px strokes align best on 0.75 px coordinates.</li>
+<li>2 px strokes align best on whole-pixel coordinates.</li>
+</ul>
+<h2 id="geometry-rules">Geometry rules</h2>
+<ul>
+<li>Keep icons simple and structurally readable.</li>
+<li>Use no more than three primary primitives.</li>
+<li>Avoid dense intersections.</li>
+<li>Prefer optical balance over mathematical symmetry.</li>
+<li>Maintain at least 2 px internal breathing room where possible.</li>
+<li>Do not fill icons unless the filled region is essential to recognition.</li>
+</ul>
+<h2 id="illustrator-setup">Illustrator setup</h2>
+<p>Use:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="txt"><code><span class="line"><span>Artboard: 24 × 24 px</span></span>
+<span class="line"><span>Units: pixels</span></span>
+<span class="line"><span>Gridline every: 1 px</span></span>
+<span class="line"><span>Stroke: 1.5 px</span></span>
+<span class="line"><span>Cap: round</span></span>
+<span class="line"><span>Join: round</span></span>
+<span class="line"><span>Align stroke: center</span></span></code></pre>
+<p>Disable <code>Align to Pixel Grid</code> when working with 1.5 px strokes. Manually validate export output instead.</p>
+<h2 id="svg-requirements">SVG requirements</h2>
+<p>Required attributes:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8;overflow-x:auto" tabindex="0" data-language="xml"><code><span class="line"><span style="color:#E1E4E8">viewBox=&quot;0 0 24 24&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">fill=&quot;none&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">stroke=&quot;currentColor&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">stroke-width=&quot;1.5&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">stroke-linecap=&quot;round&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8">stroke-linejoin=&quot;round&quot;</span></span></code></pre>
+<p>Use <code>vector-effect=&quot;non-scaling-stroke&quot;</code> only when implementation requires non-scaling strokes. Do not add it by default unless the consuming environment expects it.</p>
+<h2 id="do">Do</h2>
+<ul>
+<li>Use icons for compact UI meaning.</li>
+<li>Test at 16, 20, 24, and 32 px.</li>
+<li>Preserve strokes in SVG.</li>
+<li>Keep names semantic.</li>
+</ul>
+<h2 id="do-not">Do not</h2>
+<ul>
+<li>Scale up icons and use them as illustrations.</li>
+<li>Add decoration that does not improve recognition.</li>
+<li>Use hidden shapes to force alignment.</li>
+<li>Export with unnecessary transforms.</li>
+</ul> </article> </main>  <footer class="footer"> <div class="container footer-grid"> <div> <strong>E<sup class="brand-e2-sup">2</sup> Design System</strong> <p>Technical SVG icons, GIS marker symbols, and illustrative symbols.</p> </div> <div class="footer-meta"> <nav aria-label="Footer navigation"> <a href="/docs">Docs</a> <a href="/icons">Icons</a> <a href="/markers">Markers</a> <a href="/symbols">Symbols</a> </nav> <p class="footer-updated">
+Last updated: May 24, 2026 </p> </div> </div> </footer> </div> </body></html>
